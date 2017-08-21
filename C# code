@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _11.Cinema
+{
+    class cinema
+    {
+        static void Main(string[] args)
+        {
+            string type = Console.ReadLine();
+            int r = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+            var allsits = r * c;
+            var prise = 1.00;
+            if (type == "Premiere")
+            {
+                prise = 12.00;
+            }
+            else if (type == "Normal")
+            {
+                prise = 7.5;
+            }
+            else if (type == "Discount")
+            {
+                prise = 5.00;
+            }
+            Console.WriteLine("{0:f2} {1}",prise*allsits,"leva");
+        }
+    }
+}
